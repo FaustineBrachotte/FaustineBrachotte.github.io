@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Polices */
+@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/polices/Shrikhand-Regular.ttf") format("truetype");
+}
+h1 {
+  font-family: "Shrikhand-Regular";
+}
+
+body {
+  font-family: Roboto, Arial, serif;
+}
+
+/*# sourceMappingURL=style.css.map */
