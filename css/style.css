@@ -53,6 +53,11 @@ h3 {
   padding-top: 50px;
 }
 
+h4 {
+  font-family: "Roboto-Medium";
+  margin-bottom: 3px;
+}
+
 h6 {
   font-family: "Shrikhand-Regular";
 }
@@ -148,40 +153,61 @@ header {
 /* Restaurants */
 #restaurant-section {
   background-color: #F7F7F7;
+  padding-bottom: 40px;
 }
 
 .restaurant-prev {
   width: 450px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 20px #808080;
   margin: 20px;
-}
-.restaurant-prev .selected-heart {
-  display: none;
 }
 .restaurant-prev img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 .restaurant-prev a {
   text-decoration: none;
+}
+.restaurant-prev i {
+  font-size: 22px;
+  margin-right: 10px;
 }
 .restaurant-prev__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px 10px;
   color: black;
 }
-
-i:hover .unselected-heart {
+.restaurant-prev__heading__heart__selected {
   display: none;
 }
-i:hover .selected-heart {
-  display: unset;
-  color: #9356DC;
+
+/* Footer */
+footer {
+  background-color: #303030;
+  color: white;
+  padding: 20px;
+}
+footer > p {
+  font-family: "Shrikhand-Regular";
+  padding-bottom: 12px;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer li {
+  display: flex;
+  align-items: baseline;
+  line-height: 1.7;
+}
+footer i {
+  margin-right: 10px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

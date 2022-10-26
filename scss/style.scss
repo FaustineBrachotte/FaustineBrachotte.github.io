@@ -67,6 +67,11 @@ h3 {
     padding-top: 50px;
 }
 
+h4 {
+    font-family: "Roboto-Medium";
+    margin-bottom: 3px;
+}
+
 h6 {
     font-family: "Shrikhand-Regular";
 }
@@ -171,40 +176,60 @@ header {
 
 #restaurant-section {
     background-color: #F7F7F7;
+    padding-bottom: 40px;
 }
 
 .restaurant-prev {
     width: 450px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 0 20px #808080;
     margin: 20px;
-    .selected-heart {
-        display: none;
-    }
     img {
         width: 100%;
         height: 200px;
         object-fit: cover;
-        border-radius: 10px 10px 0 0;
+        border-radius: 15px 15px 0 0;
     };
     a {
         text-decoration: none;
+    }
+    i {
+        font-size: 22px;
+        margin-right: 10px;
     }
     &__heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 15px 10px;
         color:black;
-        }
-    }
-    i:hover {
-        .unselected-heart {
+        &__heart__selected {
             display: none;
         }
-        .selected-heart {
-            display: unset;
-            color: $primary;
-        }
     }
+}
 
+/* Footer */
+
+footer {
+    background-color: #303030;
+    color: white;
+    padding: 20px;
+    &> p {
+        font-family: "Shrikhand-Regular";
+        padding-bottom: 12px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        display: flex;
+        align-items: baseline;
+        line-height: 1.7;
+    }
+    i { 
+        margin-right: 10px;
+        font-size: 14px;
+    }
+}
