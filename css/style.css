@@ -58,14 +58,20 @@ h4 {
   margin-bottom: 3px;
 }
 
-h6 {
+h5 {
   font-family: "Shrikhand-Regular";
+}
+
+h6 {
+  font-family: "Roboto-Regular";
+  text-transform: uppercase;
 }
 
 body, button {
   font-family: Roboto, Arial, serif;
 }
 
+/* Mixins */
 /* Header */
 header {
   display: flex;
@@ -157,7 +163,7 @@ header {
 }
 
 .restaurant-prev {
-  width: 450px;
+  width: 400px;
   border-radius: 15px;
   box-shadow: 0 0 20px #808080;
   margin: 20px;
@@ -208,6 +214,63 @@ footer li {
 footer i {
   margin-right: 10px;
   font-size: 14px;
+}
+footer .handshake {
+  font-size: 10px;
+}
+
+/* Page menu */
+/* Page */
+#restaurant-page img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+#menu {
+  background-color: #e6e6e5;
+}
+#menu__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Plat */
+.dish {
+  width: 350px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #DCDCDC;
+  margin: 10px;
+}
+.dish__name {
+  font-family: "Roboto-Medium";
+  padding-bottom: 3px;
+}
+.dish__details {
+  display: flex;
+  justify-content: space-between;
+  color: #696969;
+  font-size: 14px;
+}
+.dish__details__price {
+  color: black;
+  font-family: "Roboto-Medium";
+}
+
+#order {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 50px;
+  padding: 15px 40px;
+}
+#order:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px #808080;
 }
 
 /*# sourceMappingURL=style.css.map */
