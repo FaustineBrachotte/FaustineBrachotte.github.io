@@ -74,11 +74,29 @@ body, button {
 /* Mixins */
 /* Header */
 header {
+  padding: 20px;
+  margin-bottom: 4px;
+}
+
+#header__index {
   display: flex;
   justify-content: center;
-  padding: 20px;
   box-shadow: 0 0 10px #808080;
-  margin-bottom: 4px;
+}
+
+.header__restaurant {
+  display: flex;
+  align-items: center;
+}
+.header__restaurant img {
+  margin-right: auto;
+  margin-left: auto;
+}
+.header__restaurant__return {
+  color: #303030;
+  font-size: 22px;
+  margin-right: auto;
+  padding-left: 10px;
 }
 
 /* Localisation */
