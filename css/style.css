@@ -60,11 +60,23 @@ h4 {
 
 h5 {
   font-family: "Shrikhand-Regular";
+  margin: 20px 0 0 10px;
+  font-size: 28px;
 }
 
 h6 {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Light";
   text-transform: uppercase;
+  font-size: 15px;
+  margin: 30px 0 0 10px;
+  color: #4C4B4B;
+}
+
+.line {
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  margin: 3px 0 12px 10px;
+  color: #99E2D0;
 }
 
 body, button {
@@ -92,7 +104,7 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
-.header__restaurant__return {
+.header__restaurant i {
   color: #303030;
   font-size: 22px;
   margin-right: auto;
@@ -122,10 +134,10 @@ header {
 #presentation__button {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  padding: 15px 20px;
   border-radius: 30px;
   color: white;
   font-size: 18px;
+  padding: 15px 20px;
   margin-bottom: 50px;
 }
 #presentation__button:hover {
@@ -181,7 +193,7 @@ header {
 }
 
 .restaurant-prev {
-  width: 400px;
+  width: 350px;
   border-radius: 15px;
   box-shadow: 0 0 20px #808080;
   margin: 20px;
@@ -206,7 +218,16 @@ header {
   padding: 15px 10px;
   color: black;
 }
-.restaurant-prev__heading__heart__selected {
+.restaurant-prev__heading__heart .favorite-heart__selected {
+  display: none;
+}
+.restaurant-prev__heading__heart:hover .favorite-heart__selected {
+  display: block;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.restaurant-prev__heading__heart:hover .favorite-heart__unselected {
   display: none;
 }
 
@@ -236,6 +257,10 @@ footer i {
 footer .handshake {
   font-size: 10px;
 }
+footer a {
+  text-decoration: none;
+  color: white;
+}
 
 /* Page menu */
 /* Page */
@@ -243,14 +268,33 @@ footer .handshake {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  display: block;
 }
 
-#menu {
+.menu {
   background-color: #e6e6e5;
+  border-radius: 20px;
 }
-#menu__title {
+.menu__title {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+.menu__title i {
+  font-size: 28px;
+  margin-right: 30px;
+}
+.menu__title__heart .favorite-heart__selected {
+  display: none;
+}
+.menu__title__heart:hover .favorite-heart__selected {
+  display: block;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.menu__title__heart:hover .favorite-heart__unselected {
+  display: none;
 }
 
 /* Plat */
@@ -279,12 +323,12 @@ footer .handshake {
 #order {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  padding: 15px 20px;
   border-radius: 30px;
   color: white;
   font-size: 18px;
-  margin-bottom: 50px;
   padding: 15px 40px;
+  display: block;
+  margin: 30px auto;
 }
 #order:hover {
   cursor: pointer;
