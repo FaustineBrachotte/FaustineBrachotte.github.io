@@ -108,6 +108,7 @@ body, button {
         &:hover {
             cursor: pointer;
             box-shadow: 0 0 20px #808080;
+            background: linear-gradient(lighten($secondary,5),lighten($primary,5));
         }
 }
 
@@ -193,6 +194,10 @@ header {
 
 /* Fonctionnement */
 
+#operation-list {
+    padding-bottom: 20px;
+}
+
 .operation {
     display: flex;
     align-items: baseline;
@@ -224,7 +229,7 @@ header {
         border-radius: 20px;
         &:hover {
             cursor: pointer;
-            background-color: lighten($color: $primary, $amount: 35);
+            background-color: lighten($primary, 35);
             box-shadow: 0 10px 15px #808080;
             i {
                 color: $primary;
@@ -302,8 +307,13 @@ footer {
         font-size: 10px;
     }
     a {
+        display: flex;
+        align-items: baseline;
         text-decoration: none;
         color: white;
+        &:hover {
+            color: $tertiary;
+        }
     }
 }
 
@@ -325,6 +335,7 @@ footer {
 .menu {
     background-color: #F7F7F7;
     border-radius: 20px;
+    padding-bottom: 10px;
     &__title {
         display: flex;
         justify-content: space-between;
@@ -353,7 +364,7 @@ $dish-delay: 150ms;
     margin: 10px;
     opacity: 0;
     animation: dish-anim 1s forwards;
-    @for $i from 1 through 99 {
+    @for $i from 1 through 4 {
         &--#{$i} {
             animation-delay: $dish-delay * $i * 1.7;
          }
@@ -393,8 +404,6 @@ $dish-delay: 150ms;
     display: block;
     margin : 30px auto;
 }
-
-
 
 
 /* Loader */
@@ -450,5 +459,40 @@ $anim-delay: $anim-dur/$num-dots;
     100% {
         transform: translateY(-1000px);
     }
+    
+}
+
+
+
+/* Desktop */
+
+@media all and (min-width: 640px) {
+
+    .menu__dish {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+
+    #operation-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #restaurant-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10px;
+        column-gap: 10px;
+    }
+
+    .menu {
+        padding-left: 30px;
+        &__title {
+        justify-content: flex-start;
+        column-gap: 30px;
+    }
+    }
+
     
 }
