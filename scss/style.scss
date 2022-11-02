@@ -378,21 +378,31 @@ footer {
 /* Loader */
 
 $size: 5px;
-$num-points: 5;
-$anim-dur: 500ms;
-$anim-delay: $anim-dur / $num-points;
+$num-dots: 5;
+$anim-dur: 400ms;
+$anim-delay: $anim-dur / $num-dots;
 
 .loader {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: #e6e6e5;
+    opacity: 1;
+    z-index: 100000;
+    animation: background 2.5s forwards;
     &__element {
         background: linear-gradient($secondary,$primary);
         border-radius: 50%;
         width: 10px;
         height: 10px;
         margin: 5px;
-        animation: points $anim-dur both 5 ease-in-out alternate;
-        @for $i from 1 through $num-points {
+        animation: dots $anim-dur both 5 ease-in-out alternate;
+        @for $i from 1 through $num-dots {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
              }
@@ -400,14 +410,24 @@ $anim-delay: $anim-dur / $num-points;
     }
 }
 
-@keyframes points {
+@keyframes dots {
     0% {
-        transform: scale(1);
+        transform: scale(0);
     }
     100% {
-        transform: scale(0);
+        transform: scale(1);
     }
 }
 
-
-
+@keyframes background {
+    0% {
+        transform: translateY(0);
+    }
+    99% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1000px);
+    }
+    
+}
