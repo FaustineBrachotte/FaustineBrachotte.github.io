@@ -342,6 +342,8 @@ footer {
 
 /* Plat */
 
+$dish-delay: 150ms;
+
 .dish {
     width: 350px;
     padding: 10px 20px;
@@ -349,6 +351,13 @@ footer {
     background-color: white;
     box-shadow: 0 0 20px #DCDCDC;
     margin: 10px;
+    opacity: 0;
+    animation: dish-anim 1s forwards;
+    @for $i from 1 through 99 {
+        &--#{$i} {
+            animation-delay: $dish-delay * $i * 1.7;
+         }
+    }
     &__name {
         font-family: 'Roboto-Medium';
         padding-bottom: 3px;
@@ -365,6 +374,19 @@ footer {
     }
 }
 
+@keyframes dish-anim {
+    0% {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+
+
 #order {
     @include button;
     padding: 15px 40px;
@@ -380,14 +402,13 @@ footer {
 $size: 5px;
 $num-dots: 5;
 $anim-dur: 400ms;
-$anim-delay: $anim-dur / $num-dots;
+$anim-delay: $anim-dur/$num-dots;
 
 .loader {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-
     height: 100%;
     position: fixed;
     top: 0; left: 0;
