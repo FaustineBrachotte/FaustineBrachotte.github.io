@@ -129,7 +129,7 @@ body, button {
             color: transparent;
             -webkit-background-clip: text;
             opacity: 0;
-            transition: all 400ms;
+            transition: all 500ms;
         }
     &:hover {
         .favorite-heart__selected { 
@@ -373,12 +373,16 @@ footer {
 $dish-delay: 150ms;
 
 .dish {
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0 0 20px #DCDCDC;
     margin: 10px;
     opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     animation: dish-anim 1s forwards;
     @for $i from 1 through 4 {
         &--#{$i} {
@@ -386,20 +390,40 @@ $dish-delay: 150ms;
          }
     }
     &__name {
-        font-family: 'Roboto-Medium';
-        padding-bottom: 3px;
+        padding-left: 20px;
+        font-family: 'Roboto-Regular';
     }
-    &__details {
-        display: flex;
-        justify-content: space-between;
-        color:#696969;
-        font-size:14px;
-        &__price {
-            color: black;
-            font-family: 'Roboto-Medium';
+    &__price {
+        padding: 15px 20px;
+        margin-left: auto;
+        align-self: flex-end;
+        color: black;
+        font-family: 'Roboto-Medium';
+    }
+    &__check {
+        margin-right: -70px;
+        padding: 20px 20px;
+        border-radius: 0 20px 20px 0;
+        background-color: $tertiary;
+        i {
+        padding: 5px;
+        font-size: 14px;
+        color: $tertiary;
+        background-color: white;
+        border-radius: 50px;
         }
     }
+    &:hover {
+        cursor: pointer;
+    .dish__check {
+        animation: check-anim 200ms forwards;
+        i {
+            animation: check-icon-anim 400ms forwards;
+        }
+    }
+    }
 }
+
 
 @keyframes dish-anim {
     0% {
@@ -412,6 +436,22 @@ $dish-delay: 150ms;
     }
 }
 
+
+@keyframes check-anim {
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes check-icon-anim {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 
 #order {

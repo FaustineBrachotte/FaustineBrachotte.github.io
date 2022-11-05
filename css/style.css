@@ -248,7 +248,7 @@ header {
   color: transparent;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 400ms;
+  transition: all 500ms;
 }
 .restaurant-prev__heading__heart:hover .favorite-heart__selected {
   opacity: 1;
@@ -338,7 +338,7 @@ footer a:hover {
   color: transparent;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 400ms;
+  transition: all 500ms;
 }
 .menu__title__heart:hover .favorite-heart__selected {
   opacity: 1;
@@ -349,12 +349,16 @@ footer a:hover {
 
 /* Plat */
 .dish {
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
   border-radius: 20px;
   background-color: white;
   box-shadow: 0 0 20px #DCDCDC;
   margin: 10px;
   opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   animation: dish-anim 1s forwards;
 }
 .dish--1 {
@@ -370,18 +374,37 @@ footer a:hover {
   animation-delay: 1020ms;
 }
 .dish__name {
-  font-family: "Roboto-Medium";
-  padding-bottom: 3px;
+  padding-left: 20px;
+  font-family: "Roboto-Regular";
 }
-.dish__details {
-  display: flex;
-  justify-content: space-between;
-  color: #696969;
-  font-size: 14px;
-}
-.dish__details__price {
+.dish__price {
+  padding: 15px 20px;
+  margin-left: auto;
+  align-self: flex-end;
   color: black;
   font-family: "Roboto-Medium";
+}
+.dish__check {
+  margin-right: -70px;
+  padding: 20px 20px;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+}
+.dish__check i {
+  padding: 5px;
+  font-size: 14px;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50px;
+}
+.dish:hover {
+  cursor: pointer;
+}
+.dish:hover .dish__check {
+  animation: check-anim 200ms forwards;
+}
+.dish:hover .dish__check i {
+  animation: check-icon-anim 400ms forwards;
 }
 
 @keyframes dish-anim {
@@ -392,6 +415,20 @@ footer a:hover {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+@keyframes check-anim {
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+@keyframes check-icon-anim {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 #order {
