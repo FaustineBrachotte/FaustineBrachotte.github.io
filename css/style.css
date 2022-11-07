@@ -357,8 +357,6 @@ footer a:hover {
   margin: 10px;
   opacity: 0;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   animation: dish-anim 1s forwards;
 }
 .dish--1 {
@@ -376,6 +374,12 @@ footer a:hover {
 .dish__name {
   padding-left: 20px;
   font-family: "Roboto-Regular";
+  min-width: 0;
+}
+.dish__name-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dish__price {
   padding: 15px 20px;

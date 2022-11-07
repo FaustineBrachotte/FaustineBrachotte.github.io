@@ -141,6 +141,12 @@ body, button {
         }   
 }
 
+@mixin ellipsis-overflow {
+    white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
   
 
 /* Header */
@@ -381,8 +387,6 @@ $dish-delay: 150ms;
     margin: 10px;
     opacity: 0;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     animation: dish-anim 1s forwards;
     @for $i from 1 through 4 {
         &--#{$i} {
@@ -392,6 +396,10 @@ $dish-delay: 150ms;
     &__name {
         padding-left: 20px;
         font-family: 'Roboto-Regular';
+        min-width: 0;
+        &-overflow {
+            @include ellipsis-overflow;
+        }
     }
     &__price {
         padding: 15px 20px;
@@ -423,6 +431,7 @@ $dish-delay: 150ms;
     }
     }
 }
+
 
 
 @keyframes dish-anim {
