@@ -1,0 +1,143 @@
+/* Localisation */
+
+#localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCDCDC;
+    cursor: pointer;
+    p {
+        padding: 15px;
+        font-family: 'Roboto-Medium';
+    }
+}
+
+
+/* Présentation */
+
+#presentation {
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 35px;
+    &__button {
+        @include button;
+        padding: 15px 20px;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* Fonctionnement */
+
+#operation-list {
+    padding-bottom: 20px;
+}
+
+.operation {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-family: 'Roboto-Bold';
+    > p {
+        color: white;
+        background-color: $primary;
+        padding: 5px 10px;
+        border-radius: 30px;
+        font-family: 'Roboto-Regular';
+        font-size: 14px;
+        z-index: 1;
+    }
+    i {
+        color:#808080;
+        font-size: 22px;
+        padding-right: 20px;
+    }
+    &__button {
+        display: flex;
+        position: relative;
+        left: -2%;
+        background-color:#F7F7F7;
+        box-shadow: 0 10px 15px #e6e6e5;
+        width: 350px;
+        padding: 20px 40px;
+        border-radius: 20px;
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($primary, 35);
+            box-shadow: 0 10px 15px #808080;
+            i {
+                color: $primary;
+            }
+        }
+    }
+    
+}
+
+/* Restaurants liste */
+
+#restaurant-section {
+    background-color: #F7F7F7;
+    padding-bottom: 40px;
+}
+
+.restaurant-prev {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #808080;
+    margin: 20px;
+    position: relative;
+    &:hover {
+        box-shadow: 0 0 20px #303030;
+    }
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    i {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    &__new {
+        @include new;
+    }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+        color:black;
+        &__heart {
+            @include favorite-heart;
+            }    
+        }
+    }
+
+
+
+/* Tablette */
+
+@media all and (min-width: 768px) {
+
+    #operation-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #restaurant-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10px;
+        column-gap: 10px;
+    }   
+}
+
+
+    
