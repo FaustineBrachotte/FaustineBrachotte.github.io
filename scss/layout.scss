@@ -14,7 +14,7 @@ $anim-delay: $anim-dur/$num-dots;
     height: 100%;
     position: fixed;
     top: 0; left: 0;
-    background-color: #e6e6e5;
+    background-color: $background;
     opacity: 1;
     z-index: 100000;
     animation: background 2.5s forwards;
@@ -60,7 +60,7 @@ $anim-delay: $anim-dur/$num-dots;
 /* Footer */
 
 footer {
-    background-color: #303030;
+    background-color: $background-footer;
     color: white;
     padding: 20px;
     &> p {
