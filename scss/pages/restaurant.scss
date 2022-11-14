@@ -1,5 +1,6 @@
 
 /* Header */
+
 .header__restaurant-page {
     display: flex;
     align-items: center;
@@ -19,7 +20,7 @@
 }
 
 
-/* Menu */
+/* Image */
 
 #banner {
     width: 100%;
@@ -29,190 +30,181 @@
     z-index: -1;
 }
 
+
+/* Menu */
+
 .menu {
-background-color: $page-background;
-border-radius: 40px 40px 0 0;
-padding-bottom: 10px;
-margin-top: -40px;
-&__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 10px;  
-    i {
+    background-color: $page-background;
+    border-radius: 40px 40px 0 0;
+    padding-bottom: 10px;
+    margin-top: -40px;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px;  
+        i {
+            font-size: 28px;
+            margin-right: 30px;
+        }
+        &__heart {
+            @include favorite-heart;
+        }
+    }
+    &__dish {
+        margin: 0 7px;
+    }
+    h1 {
+        font-family: "Shrikhand-Regular";
+        margin: 20px 0 0 10px;
         font-size: 28px;
-        margin-right: 30px;
     }
-    &__heart {
-        @include favorite-heart;
+    h2 {
+        font-family: "Roboto-Light";
+        text-transform: uppercase;
+        font-size: 15px;
+        margin: 0 0 0 10px;
+        padding-top: 25px;
+        color: $dark-grey;
     }
-}
-&__dish {
-    margin: 0 7px;
-}
-h1 {
-    font-family: "Shrikhand-Regular";
-    margin: 20px 0 0 10px;
-    font-size: 28px;
-}
-h2 {
-    font-family: "Roboto-Light";
-    text-transform: uppercase;
-    font-size: 15px;
-    margin: 30px 0 0 10px;
-    color: #4C4B4B;
-}
 }
 
-.line {
-width: 40px;
-border-bottom: 3px solid $tertiary;
-margin: 3px 0 12px 10px;
-color:$tertiary;
+.title-line {
+    width: 40px;
+    border-bottom: 3px solid $tertiary;
+    margin: 3px 0 12px 10px;
+    color:$tertiary;
 }
 
 
 /* Plats */
 
-$dish-delay: 150ms;
-
 .dish {
-display: flex;
-align-items: center;
-border-radius: 20px;
-background-color: white;
-box-shadow: 0 0 20px $light-grey;
-margin: 10px;
-opacity: 0;
-overflow: hidden;
-animation: dish-anim 1s forwards;
-@for $i from 1 through 4 {
-    &--#{$i} {
-        animation-delay: $dish-delay * $i * 1.7;
-     }
-}
-&__name {
-    padding-left: 20px;
-    font-family: 'Roboto-Regular';
-    min-width: 0;
-    h3 {
-        font-family: "Roboto-Medium";
-        margin-bottom: 3px;
-    }
-    &-overflow {
-        @include ellipsis-overflow;
-    }
-}
-&__price {
-    padding: 15px 20px;
-    margin-left: auto;
-    align-self: flex-end;
-    color: black;
-    font-family: 'Roboto-Medium';
-}
-&__check {
-    margin-right: -70px;
-    padding: 20px 20px;
-    border-radius: 0 20px 20px 0;
-    background-color: $tertiary;
-    i {
-    padding: 5px;
-    font-size: 14px;
-    color: $tertiary;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
     background-color: white;
-    border-radius: 50px;
+    box-shadow: 0 0 20px $light-grey;
+    margin: 10px;
+    opacity: 0;
+    overflow: hidden;
+    animation: dish-anim 1s forwards;
+    @for $i from 1 through 4 {
+        &--#{$i} {
+            animation-delay: 150ms * $i * 1.7;
+        }
+    }
+    &__name {
+        padding-left: 20px;
+        font-family: 'Roboto-Regular';
+        min-width: 0;
+        h3 {
+            font-family: "Roboto-Medium";
+            margin-bottom: 3px;
+        }
+        &-overflow {
+            @include ellipsis-overflow;
+        }
+    }
+    &__price {
+        padding: 15px 20px;
+        margin-left: auto;
+        align-self: flex-end;
+        color: black;
+        font-family: 'Roboto-Medium';
+    }
+    &__check {
+        margin-right: -70px;
+        padding: 20px 20px;
+        border-radius: 0 20px 20px 0;
+        background-color: $tertiary;
+        i {
+        padding: 5px;
+            font-size: 14px;
+            color: $tertiary;
+            background-color: white;
+            border-radius: 50px;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .dish__check {
+            animation: check-anim 200ms forwards;
+            i {
+                animation: check-icon-anim 400ms forwards;
+            }
+        }
     }
 }
-&:hover {
-    cursor: pointer;
-.dish__check {
-    animation: check-anim 200ms forwards;
-    i {
-        animation: check-icon-anim 400ms forwards;
-    }
-}
-}
-}
-
-
-
-
 
 @keyframes dish-anim {
-0% {
-    opacity: 0;
-    transform: translateY(10%)
-}
-100% {
-    opacity: 1;
-    transform: translateY(0%)
-}
+    0% {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
 }
 
 
 @keyframes check-anim {
-100% {
-    margin-right: 0;
-    opacity: 1;
-}
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes check-icon-anim {
-0% {
-    transform: rotate(-360deg);
-}
-100% {
-    transform: rotate(0deg);
-}
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 
-/* Bouton */
+/* Bouton Commander */
 
 #order {
-@include button;
-padding: 15px 40px;
-display: block;
-margin : 30px auto;
+    @include button;
+    padding: 15px 40px;
+    display: block;
+    margin : 30px auto;
 }
 
 
 
-/* Tablette */
+/* Format Tablette */
 
 @media all and (min-width: 768px) {
-
-    .menu__dish-type {
-        width: 50%;
-    }
-
     .dish {
         width: 90%;
     }
-
-    .menu__dish {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
     .menu {
+        &__dish {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &-type {
+                width: 50%;
+            }
+        }
         &__title {
         justify-content: flex-start;
         column-gap: 30px;
+        }
     }
-    }
-
-    
 }
 
-/* Desktop */
+
+/* Format Desktop */
 
 @media all and (min-width: 1200px) {
-
     .menu__dish-type {
         width: 33%;
     }
-
 }  
     
