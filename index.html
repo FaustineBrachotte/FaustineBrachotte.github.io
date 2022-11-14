@@ -23,7 +23,7 @@
         <!-- Header -->
 
         <header id="header__home-page">
-            <img src="images/logo/ohmyfood@2x.svg" alt="Logo">
+            <img src="images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood!">
         </header> 
 
         <main>
@@ -37,64 +37,65 @@
         
             <!-- Présentation -->
 
-            <div id="presentation">
+            <section id="presentation">
                 <h1>Réservez le menu qui vous convient</h1>   
-                <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2> 
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p> 
                 <button id="presentation__button">Explorez nos restaurants</button>
-            </div> 
+            </section> 
 
             
             <!-- Fonctionnement -->
 
+            <section>
+                <h2>Fonctionnement</h2>
 
-            <h3>Fonctionnement</h3>
+                <div id="operation-list">
+                    <div class="operation">
+                        <p>1</p>
+                        <div class="operation__button">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p>Choisissez un restaurant</p>
+                        </div>
+                    </div>
 
-            <div id="operation-list">
-                <div class="operation">
-                    <p>1</p>
-                    <div class="operation__button">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p>Choisissez un restaurant</p>
+                    <div class="operation">
+                        <p>2</p>
+                        <div class="operation__button">
+                            <i class="fa-solid fa-list-ul"></i>
+                            <p>Composez votre menu</p>
+                        </div>
+                    </div>
+
+                    <div class="operation">
+                        <p>3</p>
+                        <div class="operation__button">
+                            <i class="fa-solid fa-store"></i>
+                            <p>Dégustez au restaurant</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="operation">
-                    <p>2</p>
-                    <div class="operation__button">
-                        <i class="fa-solid fa-list-ul"></i>
-                        <p>Composez votre menu</p>
-                    </div>
-                </div>
-
-                <div class="operation">
-                    <p>3</p>
-                    <div class="operation__button">
-                        <i class="fa-solid fa-store"></i>
-                        <p>Dégustez au restaurant</p>
-                    </div>
-                </div>
-            </div>
+            </section>
       
 
             <!-- Restaurants -->    
 
-            <section id="restaurant-section">
-                <h3>Restaurants</h3>
+            <section id="restaurants">
+                <h2>Restaurants</h2>
 
                 <div id="restaurant-list">
 
                     <div class="restaurant-prev">
                         <a href="la-palette-du-gout.html">
-                            <div class="restaurant-prev__new">Nouveau</div>
+                            <div class="restaurant-prev--new">Nouveau</div>
                             <img src="images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
                             <div class="restaurant-prev__heading">
                                 <div>
-                                    <h4>La palette du goût</h4>
+                                    <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
                                 <div class="restaurant-prev__heading__heart">
-                                    <div class="favorite-heart__selected"><i class="fa-solid fa-heart"></i></div>
-                                    <div class="favorite-heart__unselected"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="heart--selected"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="heart--unselected"><i class="fa-regular fa-heart"></i></div>
                                 </div>
                             </div>    
                         </a>
@@ -102,16 +103,16 @@
 
                     <div class="restaurant-prev">
                         <a href="la-note-enchantee.html">
-                            <div class="restaurant-prev__new">Nouveau</div>
+                            <div class="restaurant-prev--new">Nouveau</div>
                             <img src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
                             <div class="restaurant-prev__heading">
                                 <div>
-                                    <h4>La note enchantée</h4>
+                                    <h3>La note enchantée</h3>
                                     <p>Charonne</p>
                                 </div>
                                 <div class="restaurant-prev__heading__heart">
-                                    <div class="favorite-heart__selected"><i class="fa-solid fa-heart"></i></div>
-                                    <div class="favorite-heart__unselected"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="heart--selected"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="heart--unselected"><i class="fa-regular fa-heart"></i></div>
                                 </div>
                             </div>    
                         </a>
@@ -122,12 +123,12 @@
                             <img src="images/restaurants/a-la-francaise.jpg" alt="À la française">
                             <div class="restaurant-prev__heading">
                                 <div>
-                                    <h4>À la française</h4>
+                                    <h3>À la française</h3>
                                     <p>Cité Rouge</p>
                                 </div>
                                 <div class="restaurant-prev__heading__heart">
-                                    <div class="favorite-heart__selected"><i class="fa-solid fa-heart"></i></div>
-                                    <div class="favorite-heart__unselected"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="heart--selected"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="heart--unselected"><i class="fa-regular fa-heart"></i></div>
                                 </div>
                             </div>    
                         </a>
@@ -138,12 +139,12 @@
                             <img src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
                             <div class="restaurant-prev__heading">
                                 <div>
-                                    <h4>Le délice des sens</h4>
+                                    <h3>Le délice des sens</h3>
                                     <p>Folie Méricourt</p>
                                 </div>
                                 <div class="restaurant-prev__heading__heart">
-                                    <div class="favorite-heart__selected"><i class="fa-solid fa-heart"></i></div>
-                                    <div class="favorite-heart__unselected"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="heart--selected"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="heart--unselected"><i class="fa-regular fa-heart"></i></div>
                                 </div>
                             </div>    
                         </a>

@@ -1,10 +1,21 @@
+
+/* Header */
+
+#header__home-page {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px #808080;
+    margin-bottom: 4px;
+}
+
+
 /* Localisation */
 
 #localisation {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darken($background,4);
+    background-color: darken($page-background,4);
     cursor: pointer;
     p {
         padding: 15px;
@@ -16,7 +27,7 @@
 /* Présentation */
 
 #presentation {
-    background-color: $background;
+    background-color: $page-background;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,10 +37,31 @@
         padding: 15px 20px;
         margin-bottom: 50px;
     }
+    h1 {
+        font-family: 'Roboto-Medium';
+        font-size: 26px;
+        padding-top: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    p {
+        font-family: 'Roboto-Regular';
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #696969;
+        text-align: center;
+    }
 }
 
 
 /* Fonctionnement */
+
+h2 {
+    font-family: "Roboto-Medium";
+    font-size: 24px;
+    margin: 0 0 30px 21px;
+    padding-top: 50px;
+}
 
 #operation-list {
     padding-bottom: 40px;
@@ -53,23 +85,22 @@
         z-index: 1;
     }
     i {
-        color: darken($background,40);
+        color: darken($page-background,40);
         font-size: 22px;
         padding-right: 20px;
     }
     &__button {
+        @include box-shadow;
         display: flex;
         position: relative;
         left: -2%;
-        background-color: $background;
-        box-shadow: 0 10px 15px $light-grey;
+        background-color: $page-background;
         width: 350px;
         padding: 20px 40px;
         border-radius: 20px;
         &:hover {
             cursor: pointer;
             background-color: lighten($primary, 35);
-            box-shadow: 0 10px 15px #808080;
             i {
                 color: $primary;
             }
@@ -80,8 +111,8 @@
 
 /* Restaurants liste */
 
-#restaurant-section {
-    background-color: $background;
+#restaurants {
+    background-color: $page-background;
     padding-bottom: 40px;
 }
 
@@ -93,12 +124,9 @@
 .restaurant-prev {
     width: 95%;
     border-radius: 15px;
-    box-shadow: 0 0 20px #808080;
     margin: 20px;
     position: relative;
-    &:hover {
-        box-shadow: 0 0 20px #303030;
-    }
+    @include box-shadow;
     img {
         width: 100%;
         height: 180px;
@@ -112,7 +140,7 @@
         font-size: 22px;
         margin-right: 10px;
     }
-    &__new {
+    &--new {
         @include new;
     }
     &__heading {
@@ -125,6 +153,12 @@
             @include favorite-heart;
             }    
         }
+    }
+
+    h3 {
+        font-family: "Roboto-Medium";
+        margin-bottom: 3px;
+        font-size: 17px;
     }
 
 

@@ -4,22 +4,28 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $light-grey: #C0C0C0;
-$background: #F7F7F7;
-$background-footer: #303030;
+$page-background: #F7F7F7;
+$footer-background: #303030;
 
 
 /* Mixins */
 
+@mixin box-shadow {
+    box-shadow: 0 5px 15px $light-grey;
+    &:hover {
+        box-shadow: 0 5px 15px darken($light-grey,20);
+    }
+}
+
 @mixin button {
+    @include box-shadow;
     background: linear-gradient($secondary,$primary);
         border: none;
         border-radius: 30px;
         color: white;
         font-size: 16px;
-        box-shadow: 0 5px 15px $light-grey;
         &:hover {
             cursor: pointer;
-            box-shadow: 0 5px 15px darken($light-grey,20);
             background: linear-gradient(lighten($secondary,5),lighten($primary,5));
         }
 }
@@ -27,30 +33,25 @@ $background-footer: #303030;
 @mixin favorite-heart {
     cursor: pointer;
     position: relative;
-            .favorite-heart__selected {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-            }
-            .favorite-heart__unselected {
-                position: relative;
-            }
-    .favorite-heart__selected {
+    .heart--selected {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         background: linear-gradient($primary,$secondary);
-            color: transparent;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 500ms;
-        }
+        color: transparent;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 500ms;
+    }
     &:hover {
-        .favorite-heart__selected { 
+        .heart--selected { 
             opacity: 1;
-            } 
-        .favorite-heart__unselected { 
+        } 
+        .heart--unselected { 
             opacity: 0; 
-            } 
-        }   
+        } 
+    }   
 }
 
 @mixin new {

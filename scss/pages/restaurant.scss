@@ -1,19 +1,39 @@
+
+/* Header */
+.header__restaurant-page {
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    i {
+        color: #303030;
+        font-size: 22px;
+        margin-right: auto;
+        padding-left: 10px;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+
 /* Menu */
 
-.banner img {
+#banner {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    display: block;
-    position: absolute;
+    position: relative;
     z-index: -1;
 }
 
 .menu {
-background-color: $background;
+background-color: $page-background;
 border-radius: 40px 40px 0 0;
-margin-top: 290px;
 padding-bottom: 10px;
+margin-top: -40px;
 &__title {
     display: flex;
     justify-content: space-between;
@@ -29,6 +49,18 @@ padding-bottom: 10px;
 }
 &__dish {
     margin: 0 7px;
+}
+h1 {
+    font-family: "Shrikhand-Regular";
+    margin: 20px 0 0 10px;
+    font-size: 28px;
+}
+h2 {
+    font-family: "Roboto-Light";
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 30px 0 0 10px;
+    color: #4C4B4B;
 }
 }
 
@@ -63,6 +95,10 @@ animation: dish-anim 1s forwards;
     padding-left: 20px;
     font-family: 'Roboto-Regular';
     min-width: 0;
+    h3 {
+        font-family: "Roboto-Medium";
+        margin-bottom: 3px;
+    }
     &-overflow {
         @include ellipsis-overflow;
     }
@@ -97,6 +133,8 @@ animation: dish-anim 1s forwards;
 }
 }
 }
+
+
 
 
 

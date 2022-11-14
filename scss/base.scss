@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+header {
+    padding: 20px;
+}
+
+
 /* Polices */ 
 
 @font-face {
@@ -33,4 +38,8 @@
 @font-face {
     font-family: 'Roboto-Bold';
     src: url('../polices/Roboto-Bold.ttf') format('truetype');
+}
+
+body, button {
+    font-family: Roboto, Arial, serif;
 }
