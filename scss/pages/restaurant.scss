@@ -111,7 +111,7 @@
         margin-left: auto;
         align-self: flex-end;
         color: black;
-        font-family: 'Roboto-Medium';
+        font-family: 'Roboto-Bold';
     }
     &__check {
         margin-right: -70px;
@@ -191,10 +191,6 @@
             &-type {
                 width: 50%;
             }
-        }
-        &__title {
-        justify-content: flex-start;
-        column-gap: 30px;
         }
     }
 }
