@@ -370,7 +370,7 @@ h3 {
 /* Image */
 #banner {
   width: 100%;
-  height: 350px;
+  height: 280px;
   object-fit: cover;
   position: relative;
   z-index: -1;
