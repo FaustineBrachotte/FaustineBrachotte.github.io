@@ -14,7 +14,7 @@ $footer-background: #303030;
 @mixin box-shadow {
     box-shadow: 0 5px 15px $light-grey;
     &:hover {
-        box-shadow: 0 5px 15px darken($light-grey,20);
+        box-shadow: 0 5px 15px darken($light-grey,30);
     }
 }
 
@@ -27,7 +27,7 @@ $footer-background: #303030;
         font-size: 16px;
         &:hover {
             cursor: pointer;
-            background: linear-gradient(lighten($secondary,5),lighten($primary,5));
+            background: linear-gradient(lighten($secondary,3),lighten($primary,3));
         }
 }
 

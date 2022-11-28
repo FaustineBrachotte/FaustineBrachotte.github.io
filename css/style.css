@@ -140,14 +140,14 @@ footer a:hover {
 }
 
 /* Localisation */
-#localisation {
+#location {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ededed;
   cursor: pointer;
 }
-#localisation p {
+#location p {
   padding: 15px;
   font-family: "Roboto-Medium";
 }
@@ -159,7 +159,7 @@ footer a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 35px;
+  padding: 0 25px;
 }
 #presentation__button {
   box-shadow: 0 5px 15px #C0C0C0;
@@ -172,11 +172,11 @@ footer a:hover {
   margin-bottom: 50px;
 }
 #presentation__button:hover {
-  box-shadow: 0 5px 15px #8d8d8d;
+  box-shadow: 0 5px 15px #747474;
 }
 #presentation__button:hover {
   cursor: pointer;
-  background: linear-gradient(#ff93e1, #a16be0);
+  background: linear-gradient(#ff88de, #9b63df);
 }
 #presentation h1 {
   font-family: "Roboto-Medium";
@@ -233,7 +233,7 @@ h2 {
   width: 90%;
 }
 .operation__button:hover {
-  box-shadow: 0 5px 15px #8d8d8d;
+  box-shadow: 0 5px 15px #747474;
 }
 .operation__button:hover {
   cursor: pointer;
@@ -262,7 +262,7 @@ h2 {
   box-shadow: 0 5px 15px #C0C0C0;
 }
 .restaurant-prev:hover {
-  box-shadow: 0 5px 15px #8d8d8d;
+  box-shadow: 0 5px 15px #747474;
 }
 .restaurant-prev img {
   width: 100%;
@@ -426,16 +426,11 @@ h3 {
   font-family: "Roboto-Light";
   text-transform: uppercase;
   font-size: 15px;
-  margin: 0 0 0 10px;
-  padding-top: 25px;
+  margin: 0 0 15px 10px;
+  padding: 20px 0 4px 0;
   color: #696969;
-}
-
-.title-line {
   width: 40px;
   border-bottom: 3px solid #99E2D0;
-  margin: 3px 0 12px 10px;
-  color: #99E2D0;
 }
 
 /* Plats */
@@ -543,11 +538,11 @@ h3 {
   margin: 30px auto;
 }
 #order:hover {
-  box-shadow: 0 5px 15px #8d8d8d;
+  box-shadow: 0 5px 15px #747474;
 }
 #order:hover {
   cursor: pointer;
-  background: linear-gradient(#ff93e1, #a16be0);
+  background: linear-gradient(#ff88de, #9b63df);
 }
 
 /* Format Tablette */
