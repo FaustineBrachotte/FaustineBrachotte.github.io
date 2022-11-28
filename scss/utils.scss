@@ -42,6 +42,7 @@ $footer-background: #303030;
         background: linear-gradient($primary,$secondary);
         color: transparent;
         -webkit-background-clip: text;
+        background-clip: text;
         opacity: 0;
         transition: all 500ms;
     }
