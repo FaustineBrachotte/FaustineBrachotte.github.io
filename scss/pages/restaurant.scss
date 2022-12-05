@@ -109,20 +109,24 @@
         padding: 20px 20px;
         border-radius: 0 20px 20px 0;
         background-color: $tertiary;
+        transition: all 200ms;
         i {
-        padding: 5px;
+            padding: 5px;
             font-size: 14px;
             color: $tertiary;
             background-color: white;
             border-radius: 50px;
+            transform: rotate(-360deg);
+            transition: transform 400ms;
         }
     }
     &:hover {
         cursor: pointer;
         .dish__check {
-            animation: check-anim 200ms forwards;
+            margin-right: 0;
+            opacity: 1;
             i {
-                animation: check-icon-anim 400ms forwards;
+                transform: rotate(0deg);
             }
         }
     }
@@ -136,23 +140,6 @@
     100% {
         opacity: 1;
         transform: translateY(0%)
-    }
-}
-
-
-@keyframes check-anim {
-    100% {
-        margin-right: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes check-icon-anim {
-    0% {
-        transform: rotate(-360deg);
-    }
-    100% {
-        transform: rotate(0deg);
     }
 }
 
