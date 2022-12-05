@@ -1,4 +1,3 @@
-
 /* Header */
 
 .header__restaurant-page {
@@ -19,7 +18,6 @@
     }
 }
 
-
 /* Image */
 
 #banner {
@@ -30,15 +28,14 @@
     z-index: -1;
 }
 
-
 /* Menu */
 
-#menu {
+.menu {
     background-color: $page-background;
     border-radius: 40px 40px 0 0;
     padding-bottom: 10px;
     margin-top: -40px;
-    .menu__title {
+    &__title {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -51,7 +48,7 @@
             @include favorite-heart;
         }
     }
-    .menu__dish {
+    &__dish {
         margin: 0 7px;
     }
     h1 {
@@ -159,7 +156,6 @@
     }
 }
 
-
 /* Bouton Commander */
 
 #order {
@@ -168,8 +164,6 @@
     display: block;
     margin : 30px auto;
 }
-
-
 
 /* Format Tablette */
 
@@ -188,7 +182,6 @@
         }
     }
 }
-
 
 /* Format Desktop */
 

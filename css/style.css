@@ -378,27 +378,27 @@ h3 {
 }
 
 /* Menu */
-#menu {
+.menu {
   background-color: #F7F7F7;
   border-radius: 40px 40px 0 0;
   padding-bottom: 10px;
   margin-top: -40px;
 }
-#menu .menu__title {
+.menu__title {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 10px;
 }
-#menu .menu__title i {
+.menu__title i {
   font-size: 28px;
   margin-right: 30px;
 }
-#menu .menu__title__heart {
+.menu__title__heart {
   cursor: pointer;
   position: relative;
 }
-#menu .menu__title__heart .heart--selected {
+.menu__title__heart .heart--selected {
   position: absolute;
   top: 0;
   left: 0;
@@ -410,21 +410,21 @@ h3 {
   opacity: 0;
   transition: all 500ms;
 }
-#menu .menu__title__heart:hover .heart--selected {
+.menu__title__heart:hover .heart--selected {
   opacity: 1;
 }
-#menu .menu__title__heart:hover .heart--unselected {
+.menu__title__heart:hover .heart--unselected {
   opacity: 0;
 }
-#menu .menu__dish {
+.menu__dish {
   margin: 0 7px;
 }
-#menu h1 {
+.menu h1 {
   font-family: "Shrikhand-Regular";
   margin: 20px 0 0 10px;
   font-size: 28px;
 }
-#menu h2 {
+.menu h2 {
   font-family: "Roboto-Light";
   text-transform: uppercase;
   font-size: 15px;
