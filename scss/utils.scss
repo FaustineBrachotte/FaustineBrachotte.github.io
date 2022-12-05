@@ -20,14 +20,14 @@ $footer-background: #303030;
 @mixin button {
     @include box-shadow;
     background: linear-gradient($secondary,$primary);
-        border: none;
-        border-radius: 30px;
-        color: white;
-        font-size: 16px;
-        &:hover {
-            cursor: pointer;
-            background: linear-gradient(lighten($secondary,3),lighten($primary,3));
-        }
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(lighten($secondary,3),lighten($primary,3));
+    }
 }
 
 @mixin favorite-heart {
@@ -72,4 +72,3 @@ $footer-background: #303030;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-  

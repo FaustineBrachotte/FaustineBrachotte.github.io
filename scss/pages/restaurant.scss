@@ -152,6 +152,7 @@
     margin : 30px auto;
 }
 
+
 /* Format Tablette */
 
 @media all and (min-width: 768px) {
@@ -172,9 +173,8 @@
 
 /* Format Desktop */
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1400px) {
     .menu__dish-type {
         width: 33%;
     }
-}  
-    
+}     
