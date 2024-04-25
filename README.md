@@ -17,9 +17,9 @@ Le site est entièrement conçu en HTML et CSS, avec le préprocesseur Sass.
 **Maquettes :**
 <br>
 
-![maquette-desktop](https://github.com/FaustineBrachotte/Ohmyfood/assets/105442482/dfc1e3ca-6a1b-4af1-b5c9-2002c2c09737)
+![maquette-mobile-1](https://github.com/FaustineBrachotte/Ohmyfood/assets/105442482/dfc1e3ca-6a1b-4af1-b5c9-2002c2c09737)
 
 <br>
 
-![maquette-desktop](https://github.com/FaustineBrachotte/Ohmyfood/assets/105442482/0de02a8c-16c1-4349-be74-a968db192645)
+![maquette-mobile-2](https://github.com/FaustineBrachotte/Ohmyfood/assets/105442482/0de02a8c-16c1-4349-be74-a968db192645)
 
