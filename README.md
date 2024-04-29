@@ -5,7 +5,7 @@
 L'objectif de ce projet est d'intégrer l'interface du site Ohmyfood à partir de maquettes mobile au format PNG. L'intégration doit être mobile-first et le site doit s'adapter à tous les formats. Des animations CSS doivent être intégrées pour enrichir l'expérience utilisateur.
 
 Le site est entièrement conçu en HTML et CSS, avec le préprocesseur Sass.
-
+ 
 <br>
 
 **Enjeux :**
